@@ -7,6 +7,8 @@ import WalletConnectProvider from '@walletconnect/web3-provider'
 import { AccountContext } from '../context'
 import { ownerAddress } from '../config'
 
+/* update with Moralis hooks */
+
 function MyApp({ Component, pageProps }) {
   /* create local state to save account information after signin */
   const [account, setAccount] = useState(null);
