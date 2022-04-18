@@ -5,8 +5,6 @@ import { create as ipfsHttpClient } from 'ipfs-http-client'
 import { useRouter } from 'next/router'
 import Web3Modal from 'web3modal'
 
-const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
-
 import { marketplaceAddress, ownerAddress } from '../config'
 
 import NFTMarketplace from '../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json'
@@ -17,6 +15,8 @@ export default function createItem() {
   const [formInput, updateFormInput] = useState({ price: '', name: '', description: '', rare: '' })
   const router = useRouter()
   const account = useContext(AccountContext)
+
+  const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
 
   /* first, upload to IPFS for image only */
   async function onChange(e) {
