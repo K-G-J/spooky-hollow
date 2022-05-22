@@ -33,6 +33,8 @@ yarn-error.log*
 
 node_modules
 .env
+.infuraid
+.secret
 coverage
 coverage.json
 typechain
